@@ -94,6 +94,8 @@ static const int logLevel = GCDAsyncSocketLogLevel;
 
 #endif
 
+#import "CASLoggerDefines.h"
+
 /**
  * Seeing a return statements within an inner block
  * can sometimes be mistaken for a return point of the enclosing method.

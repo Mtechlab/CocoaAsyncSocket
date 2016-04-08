@@ -1,0 +1,19 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import "GlobalDefines.h"
+    #import "MSMDebugLogger.h"
+    #import "MSMLogger.h"
+#endif
+
+#define NSLog       MSMLogError
+
+#ifdef NSAssert
+#undef NSAssert
+#endif
+#define NSAssert    MSMAssert

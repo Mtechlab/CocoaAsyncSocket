@@ -80,6 +80,8 @@ static const int logLevel = LOG_LEVEL_VERBOSE;
 
 #endif
 
+#import "CASLoggerDefines.h"
+
 /**
  * Seeing a return statements within an inner block
  * can sometimes be mistaken for a return point of the enclosing method.
@@ -3950,12 +3952,12 @@ enum GCDAsyncUdpSocketConfig
 		if (currentSend->addressFamily == AF_INET)
 		{
 			result = send(socket4FD, buffer, length, 0);
-			LogVerbose(@"send(socket4FD) = %d", result);
+			LogVerbose(@"send(socket4FD) = %lu", result);
 		}
 		else
 		{
 			result = send(socket6FD, buffer, length, 0);
-			LogVerbose(@"send(socket6FD) = %d", result);
+			LogVerbose(@"send(socket6FD) = %lu", result);
 		}
 	}
 	else
@@ -3971,12 +3973,12 @@ enum GCDAsyncUdpSocketConfig
 		if (currentSend->addressFamily == AF_INET)
 		{
 			result = sendto(socket4FD, buffer, length, 0, dst, dstSize);
-			LogVerbose(@"sendto(socket4FD) = %d", result);
+			LogVerbose(@"sendto(socket4FD) = %lu", result);
 		}
 		else
 		{
 			result = sendto(socket6FD, buffer, length, 0, dst, dstSize);
-			LogVerbose(@"sendto(socket6FD) = %d", result);
+			LogVerbose(@"sendto(socket6FD) = %lu", result);
 		}
 	}
 	
