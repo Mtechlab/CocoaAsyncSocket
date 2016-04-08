@@ -42,3 +42,11 @@ Pods/
 # Carthage/Checkouts
 
 Carthage/Build
+
+
+Examples/
+README.markdown
+Source/Vendor/
+Tests/iOS/
+Tests/Shared/
+CocoaAsyncSocket.xcodeproj/xcshareddata/xcschemes/
